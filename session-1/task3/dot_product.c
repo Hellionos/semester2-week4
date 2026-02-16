@@ -4,16 +4,23 @@
  */
 
  #include <stdio.h>
+ #include <stdlib.h>
 
  int main( void ) {
     int n = 5;
     float *a, *b, *d;  // stack-based pointers
+
 
     // allocation of heap memory for vectors
     a = calloc( n, sizeof(float) );
     b = calloc( n, sizeof(float) );
     d = calloc( n, sizeof(float) );
 
+    d = calloc(5,sizeof(int *));
+    for (int i=0;i<5;++i) {
+      d = d + a[i]*b[i];
+      printf("%f\n",d);
+    }
     /*
     Code to initialise the vectors with numerical data 
     Code to compute the dot product 
@@ -21,6 +28,7 @@
     - note that loop now run k=0;k<n 
     Store your answer in d
     print your final answer
+    int **mat;
     */
 
     // explicit deallocation of heap memory before exit */
