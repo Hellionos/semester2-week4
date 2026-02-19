@@ -20,7 +20,7 @@
    printf("\n");
     for (int k=0;k<4;++k) {
   
-      for (int n=0;n<4;++n) {
+      for (int n=k+1;n<4;++n) {
          i=a[k][n];
          j=a[n][k];
          a[n][k]=i;
@@ -29,7 +29,7 @@
       for (int k=0;k<4;++k) {
   
          for (int n=0;n<4;++n) {
-         printf(" %d ",a[n][k]);
+         printf(" %d ",a[k][n]);
       }
       printf("\n");
     }
