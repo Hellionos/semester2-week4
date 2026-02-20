@@ -14,3 +14,11 @@ int main( void ) {
 
     return 0;
 }
+/* Initial Result
+As array: hellohello
+Length of array: 5
+As string: hello
+Length of string: 6*/
+
+//strange behaviour from lack of null character at end of string
+//keeps printing until it reaches the null on the charstring
