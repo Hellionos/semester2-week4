@@ -18,4 +18,9 @@ int main( int argc, char **argv ) {
 }
 
 // What is printed?
-// What form is the data?
+// What form is the data? a string
+/*Number of args: 4
+argv[0]: ./cmd_line_args
+argv[1]: abc
+argv[2]: 123
+argv[3]: hello*/

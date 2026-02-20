@@ -12,3 +12,6 @@ print(f"argv: {sys.argv}")
 
 # what is printed?
 # what form is the data?
+
+#Number of args: 4
+#argv: ['cmd_line_args.py', 'abc', '213', 'hello'] - a list
