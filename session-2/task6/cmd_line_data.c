@@ -14,10 +14,13 @@
 #include <stdlib.h>
 
 int main( int argc, char **argv ) {
-    
-    /*
-    Your code
-    */
+    if (argc == 3);
+        int integer = atoi(argv[1]);
+        float floaty = atof(argv[3]);
+
+        printf("%d\n",integer);
+        printf("%s\n",argv[2]);
+        printf("%f\n",floaty);
 
     return 0;
 }
