@@ -12,16 +12,15 @@ int main (void) {
     char foxstring[] = "The quick brown fox jumped over the lazy dog";
     char ump[] = "ump";
     char *ptr = strstr(foxstring,ump);
-    char *myptr = strtok(foxstring,ump);
-    if (ptr!=NULL);
-        printf("%p\n",&ptr);
+    if (ptr!=NULL) {
+        printf("Address of match: %p\n",(void*)ptr);
         printf("%s\n",ptr);
         for (int k=0;k<3;k++) {
         
-            printf("%c",ptr[k]);
+            putchar(ptr[k]);
         }
-        printf("\n%s\n",myptr);
-
+        putchar('\n');
+    }
         
     return 0;
 }
