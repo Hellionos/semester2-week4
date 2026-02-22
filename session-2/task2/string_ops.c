@@ -7,7 +7,7 @@
 #include <string.h>
 
 int main( void ) {
-    char str1[100] = "hello";
+    char str1[100] = "aello";
     char str2[100] = "goodbye";
     char str3[100];
 
@@ -27,3 +27,5 @@ int main( void ) {
 /*1
 hellogoodbye
 goodbye*/
+/*zello returned 19, the difference between z and g*/
+/*aello returned -6, the difference between a and g*/
