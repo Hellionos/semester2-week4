@@ -26,7 +26,9 @@ int main( int argc, char **argv ) {
             strcat(buffer,argv[k]);
         }
     }
-
+    if (argc == 2) {
+        strcpy(buffer,argv[1]);
+    }
     printf("%s\n",buffer); // use only this single print statement in your submitted code
     return 0;
 }
