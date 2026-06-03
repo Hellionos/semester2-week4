@@ -10,7 +10,7 @@ int main( void ) {
     int n = 4;           
     float **a, *b, *c;
 
-    a = calloc(n,sizeof(float));
+    a = calloc(n,sizeof(float *));
     for(int k = 0;k<4;++k) {
         a[k]=calloc(n,sizeof(float));
     }
@@ -18,14 +18,14 @@ int main( void ) {
     c = calloc(n,sizeof(float));
 
    for (int k=0;k<4;++k) {
-      for (int n=0;n<4;++n) {
-         a[k][n]=1;
+      for (int i=0;i<4;++i) {
+         a[k][i]=1;
       }
       b[k]=1;
-      for (int n=0;n<4;++n) {
-         c[k]=b[k]*a[k][n];
+      for (int i=0;i<4;++i) {
+         c[k]+=b[k]*a[k][i];
       }
-      printf(" %f ",c[k]);
+      printf("%f ",c[k]);
    }
     /*
     Dynamically allocate the matrix a and vectors b and c using size n
@@ -35,6 +35,9 @@ int main( void ) {
     Print your final answer
     Free the allocated memory
     */
+    for (int i = 0; i < n; ++i){
+      free(a[i]);
+    }
     free(a);
     free(b);
     free(c);
